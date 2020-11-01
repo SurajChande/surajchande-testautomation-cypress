@@ -1,7 +1,7 @@
 {
   "name": "surajchande-testautomation-cypress",
-  "version": "1.0.0",
-  "description": "End to End Test Automation framework for a banking application",
+  "version": "1.0.1",
+  "description": "End to End Test Automation framework to test a banking application web page",
   "main": "index.js",
   "dependencies": {
     "cypress": "^5.5.0",

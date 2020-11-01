@@ -1,8 +1,11 @@
 import KiwiSaverRetirementCalculatorPage from '../support/pageObjects/kiwiSaverRetirementCalculatorPage';
 
-describe ('Information messages validations', () => {
+describe ('Information messages validations - Slow', () => {
     let kiwiSaverRetirementCalculatorPage: KiwiSaverRetirementCalculatorPage;
     const urlPath = 'http://www.westpac.co.nz/kiwisaver/calculators/kiwisaver-calculator/';
+
+    // Adding 2 sec cy.wait()s in this specs so that when reviewing the execution can be seen in slow motion
+    // cy.wait()s are not recommended. However, added waits here to facilitate review
 
     const currentAgeMessage = 'This calculator has an age limit of 18 to 64 years old.';
     const employmentStatusMessage = 'If you are earning a salary or wage, select ‘Employed’. Your employer contributions will be automatically calculated at a rate of 3% of your before-tax salary or wages. You can also select ‘Self-employed’ or ‘Not employed’ and then enter below (in the Voluntary contributions field), the amount and frequency of any contributions that you wish to make.';
@@ -21,47 +24,61 @@ describe ('Information messages validations', () => {
 
     it ('should show correct information message for current age field', () => {
         kiwiSaverRetirementCalculatorPage.clickCurrentAgeInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateCurrentAgeInformation(currentAgeMessage);
     });
 
     it ('should show correct information message for employment status field', () => {
         kiwiSaverRetirementCalculatorPage.clickEmploymentStatusInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateEmploymentStatusInformation(employmentStatusMessage);
     });
 
     it ('should show correct information message for salary field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickSalaryInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateSalaryInformation(salaryMessage);
     });
 
     it ('should show correct information message for member contribution field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickMemberContributionInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validatMemberContributionInformation(memberContributionMessage);
     });
 
     it ('should show correct information message for kiwisaver balance field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickKiwiSaverBalanceInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateKiwiSaverBalanceInformation(kiwiSaverBalanceMessage);
     });
 
     it ('should show correct information message for voluntary contribution field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickVoluntaryContributionInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateVoluntaryContributionInformation(voluntaryContributionsMessage);
     });
 
     it ('should show correct information message for risk profile field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickRiskProfileInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateRiskProfileInformation(riskProfileMessage);
     });
 
     it ('should show correct information message for savings goal field', () => {
-        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed');
+        kiwiSaverRetirementCalculatorPage.selectEmploymentStatus('Employed'); // So that all info icons are seen
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.clickSavingsGoalInfoIcon();
+        cy.wait(2000);
         kiwiSaverRetirementCalculatorPage.validateSavingsGoalInformation(savingsGoalMessage);
     });
 });

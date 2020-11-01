@@ -5,7 +5,7 @@ class KiwiSaverRetirementCalculatorPage {
 
         return cy
             .get('.content-inner-header')
-            .contains('KiwiSaver Retirement Calculator');
+            .contains('KiwiSaver Retirement Calculator'); // To ensure the page is loaded
     }
 
     public clickCurrentAgeInfoIcon(): Cypress.Chainable {
@@ -20,7 +20,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-show='helpService.visible(field.helpId)']:eq(0)"))
                     .should('contain', information);
             });
@@ -56,7 +55,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-show='helpService.visible(field.helpId)']:eq(2)"))
                     .should('contain', information);
             });
@@ -92,7 +90,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-show='helpService.visible(field.helpId)']:eq(4)"))
                     .should('contain', information);
             });
@@ -110,7 +107,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-show='helpService.visible(field.helpId)']:eq(5)"))
                     .should('contain', information);
             });
@@ -128,7 +124,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-show='helpService.visible(field.helpId)']:eq(6)"))
                     .should('contain', information);
             });
@@ -182,7 +177,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-model='displayModel']:eq(1)")).type(salary);
                 cy.wrap(body.find("[ng-model='displayModel']:eq(2)")).click();
             });
@@ -192,7 +186,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-model='displayModel']:eq(1)")).type(kiwiSaverBalance);
             });
     }
@@ -201,7 +194,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-model='displayModel']:eq(3)")).type(savingsGoal);
             });
     }
@@ -210,7 +202,6 @@ class KiwiSaverRetirementCalculatorPage {
         return cy
             .get('#calculator-embed > iframe').then(($iframe) => {
                 const body = $iframe.contents();
-
                 cy.wrap(body.find("[ng-model='displayModel']:eq(2)")).type(voluntaryContribution);
             });
     }

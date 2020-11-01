@@ -36,3 +36,4 @@ DEVICE=ipad-mini npm run cypress:e2e-mobile-ui // Run end to end tests in UI mod
 | Version | Summary                      |
 | ------- | -----------------------------|
 | 1.0.0   | Initial Framework            |
+| 1.0.1   | Added slow motion tests      |
