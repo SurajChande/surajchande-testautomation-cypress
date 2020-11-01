@@ -11,6 +11,13 @@ Following softwares will need to be available or should be downloaded and instal
 - Microsoft Edge (Only for crossbrowser test commands) - https://www.microsoft.com/en-us/edge
 - Firefox (Only for crossbrowser test commands) - https://www.mozilla.org/en-US/firefox/new/
 
+## Instructions 
+
+- Install all pre-requisites softwares as mentioned above
+- Download the code from the repo - https://github.com/SurajChande/surajchande-testautomation-cypress
+- Open in your IDE of your choice 
+- Run the below mentioned commands in the terminal
+
 ## Usage
 
 ```
