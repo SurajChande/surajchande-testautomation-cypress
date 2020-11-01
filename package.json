@@ -1,0 +1,28 @@
+{
+  "name": "surajchande-testautomation-cypress",
+  "version": "1.0.0",
+  "description": "End to End Test Automation framework for a banking application",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^5.5.0",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cypress:e2e": "npx cypress run",
+    "cypress:e2e-ui": "npx cypress open",
+    "cypress:e2e-crossbrowser": "npx cypress run --config-file cypress/configs/cypress.${BROWSER}.json",
+    "cypress:e2e-crossbrowser-ui": "npx cypress open --config-file cypress/configs/cypress.${BROWSER}.json",
+    "cypress:e2e-mobile": "npx cypress run --config-file cypress/configs/cypress.${DEVICE}.json",
+    "cypress:e2e-mobile-ui": "npx cypress open --config-file cypress/configs/cypress.${DEVICE}.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "surajchande-testautomation-cypress"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "Suraj Chande",
+  "license": "ISC"
+}
