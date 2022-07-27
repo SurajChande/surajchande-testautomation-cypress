@@ -4,8 +4,8 @@ class KiwiSaverRetirementCalculatorPage {
         cy.visit(urlPath);
 
         return cy
-            .get('.content-inner-header')
-            .contains('KiwiSaver Retirement Calculator'); // To ensure the page is loaded
+            .get('.page-header__title')
+            .contains('Westpac KiwiSaver Scheme Calculator.'); // To ensure the page is loaded
     }
 
     public clickCurrentAgeInfoIcon(): Cypress.Chainable {
